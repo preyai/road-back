@@ -12,6 +12,7 @@ module.exports = function (app) {
     phone: { type: String},
     region: {type: Types.ObjectId, ref: 'regions'},
     comment: { type: String},
+    status: {type: Boolean, default: false}
   }, {
     timestamps: true
   });
