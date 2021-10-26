@@ -9,7 +9,10 @@ module.exports = function (app) {
   const schema = new Schema({
     value: { type: String, required: true },
     label: { type: String, required: true },
-    limit: {type: Number}
+    limit: {type: Number},
+    date: { type: String },
+    time: { type: String },
+    address: { type: String },
   }, {
     timestamps: true
   });
