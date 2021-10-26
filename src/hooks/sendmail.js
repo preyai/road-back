@@ -17,7 +17,7 @@ async function getQr(text) {
 
 module.exports = () => {
   return async context => {
-    const qr = await getQr('https://danogips.ru/roadshow/admin/members/' + context.result._id);
+    const qr = await getQr('https://danogips.ru/roadshow/admin#/members/' + context.result._id);
     console.log(qr);
 
     const transporter = nodemailer.createTransport({
@@ -25,21 +25,21 @@ module.exports = () => {
       port: 465,
       secure: true,
       auth: {
-        user: 'danoroadshow@yandex.ru',
-        pass: 'sCZx$GdkvA#5b)#'
+        user: 'preyaizman@yandex.ru',
+        pass: '0507Spase21'
       }
     });
 
     const mailOptions = {
-      from: 'danoroadshow@yandex.ru',
+      from: 'preyaizman@yandex.ru',
       to: context.result.email,
-      subject: 'email from site',
+      subject: 'Road Show',
       // html: '<img src="' + qr + '" alt="" />'
       html: '<p>Ваш билет на мероприятие</p> <img src="' + qr + '" alt="" />',
 
     };
     const mailOptions2 = {
-      from: 'danoroadshow@yandex.ru',
+      from: 'preyaizman@yandex.ru',
       to: 'Chukhlantseva.Kseniia@danogips.ru',
       // html: '<img src="' + qr + '" alt="" />'
       subject: 'email from site',
