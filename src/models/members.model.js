@@ -8,7 +8,7 @@ module.exports = function (app) {
   const { Schema, Types } = mongooseClient;
   const schema = new Schema({
     name: { type: String, required: true },
-    email: { type: String, unique : false},
+    email: { type: String, unique : true},
     phone: { type: String},
     region: {type: Types.ObjectId, ref: 'regions'},
     comment: { type: String},
