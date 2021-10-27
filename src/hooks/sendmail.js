@@ -28,13 +28,13 @@ module.exports = () => {
       port: 465,
       secure: true,
       auth: {
-        user: 'preyaizman@yandex.ru',
-        pass: '0507Spase21'
+        user: 'Danogips.marketing@yandex.ru',
+        pass: 'SuperDano16'
       }
     });
 
     const mailOptions = {
-      from: 'preyaizman@yandex.ru',
+      from: 'Danogips.marketing@yandex.ru',
       to: context.result.email,
       subject: 'Road Show',
       // html: '<img src="' + qr + '" alt="" />'
@@ -60,15 +60,15 @@ module.exports = () => {
 
     };
     const mailOptions2 = {
-      from: 'preyaizman@yandex.ru',
+      from: 'Danogips.marketing@yandex.ru',
       to: 'Chukhlantseva.Kseniia@danogips.ru',
       // html: '<img src="' + qr + '" alt="" />'
       subject: 'email from site',
-      html: `<p>Новый участник</p>
-            <p>context.result.name</p>
-            <p>context.result.email</p>
-            <p>context.result.phone</p>
-            <p>context.result.region</p>`,
+      html: '<p>Новый участник</p>'+
+            '<p>'+context.result.name+'</p>'+
+            '<p>'+context.result.email+'</p>'+
+            '<p>'+context.result.phone+'</p>'+
+            '<p>'+context.result.region+'</p>',
     };
     transporter.sendMail(mailOptions2);
     transporter.sendMail(mailOptions, function (error, info) {
