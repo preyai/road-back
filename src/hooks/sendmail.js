@@ -59,18 +59,18 @@ module.exports = () => {
         '<p>предьявите QR-код организаторам.</p>',
 
     };
-    // const mailOptions2 = {
-    //   from: 'preyaizman@yandex.ru',
-    //   to: 'Chukhlantseva.Kseniia@danogips.ru',
-    //   // html: '<img src="' + qr + '" alt="" />'
-    //   subject: 'email from site',
-    //   html: `<p>Новый участник</p>
-    //         <p>context.result.name</p>
-    //         <p>context.result.email</p>
-    //         <p>context.result.phone</p>
-    //         <p>context.result.region</p>`,
-    // };
-    // transporter.sendMail(mailOptions2);
+    const mailOptions2 = {
+      from: 'preyaizman@yandex.ru',
+      to: 'Chukhlantseva.Kseniia@danogips.ru',
+      // html: '<img src="' + qr + '" alt="" />'
+      subject: 'email from site',
+      html: `<p>Новый участник</p>
+            <p>context.result.name</p>
+            <p>context.result.email</p>
+            <p>context.result.phone</p>
+            <p>context.result.region</p>`,
+    };
+    transporter.sendMail(mailOptions2);
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         console.log(error);
