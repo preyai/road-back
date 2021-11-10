@@ -52,7 +52,7 @@ module.exports = () => {
         '<p>12:10-12:50 – Приклеивание стеклохолста на Danogips SuperFinish</p>' +
         '<p>12:50-13:20 – Кофе-брейк</p>' +
         '<p>13:20-14:20 – Обзор продуктов Danogips Top и Danogips Jet5</p>' +
-        '<p>14:20-14:40 – Презентация новинки Danogips UltraFinish (в макете выделить цветом, сделать акцент)</p>' +
+        '<p>14:20-14:40 – Презентация новинки Danogips UltraFinish</p>' +
         '<p>14:40-15:20 – Danogips ProSpray. Механизация строительных процессов</p>' +
         '<p>15:20 – Розыгрыш призов</p>' +
         '<img src="' + qr + '" alt="" />' +
@@ -68,7 +68,7 @@ module.exports = () => {
             '<p>'+context.result.name+'</p>'+
             '<p>'+context.result.email+'</p>'+
             '<p>'+context.result.phone+'</p>'+
-            '<p>'+context.result.region+'</p>',
+            '<p>город '+ region.label +'</p>',
     };
     transporter.sendMail(mailOptions2);
     transporter.sendMail(mailOptions, function (error, info) {
