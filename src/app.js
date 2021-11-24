@@ -22,6 +22,7 @@ const mongoose = require('./mongoose');
 
 const app = express(feathers());
 
+
 // Load app configuration
 app.configure(configuration());
 // Enable security, CORS, compression, favicon and body parsing
@@ -60,5 +61,6 @@ app.use(express.notFound());
 app.use(express.errorHandler({ logger }));
 
 app.hooks(appHooks);
+
 
 module.exports = app;
